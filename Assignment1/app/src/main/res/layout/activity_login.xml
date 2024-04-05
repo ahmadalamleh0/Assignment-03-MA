@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root layout: RelativeLayout -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen"
+    tools:context=".LoginActivity">
+
+    <!-- Semi-transparent overlay for background color -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_primary"
+        android:alpha="0.8"/>
+
+
+    <!-- Container for logo and app name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp"
+            android:layout_above="@+id/card_view">
+
+            <!-- App Logo -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+            <!-- App Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HaFLa"
+            android:textStyle="bold"
+            android:fontFamily="@font/protest_riot_regular"
+            android:textSize="32sp"
+            android:textColor="@color/white"/>
+
+
+
+        </LinearLayout>
+
+    <!-- CardView for login form -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="28dp"
+            android:layout_marginBottom="-20dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/card_view">
+
+            <!-- Container for login form elements -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <!-- "Welcome" text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textColor="@color/my_primary"
+                    android:fontFamily="@font/protest_riot_regular"
+                    android:textSize="32sp"
+                    android:textStyle="bold"/>
+
+                <!-- Information text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please login with your information"
+                    android:alpha="0.7"/>
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"/>
+
+                <!-- Email Address -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:alpha="0.7"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:drawableEnd="@drawable/done_icon"/>
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"/>
+
+                <!-- Password -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:alpha="0.7"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:drawableEnd="@drawable/password_icon"/>
+
+                <!-- Remember me checkbox and forgot password link -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remember me"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.7"/>
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="forgot my password"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                    
+                </RelativeLayout>
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"/>
+
+                <!-- Login Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:id="@+id/btnLogin"
+                    android:layout_height="60dp"
+                    android:text="Login"
+                    app:cornerRadius="32dp"/>
+
+                <!-- Spacing -->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"/>
+
+
+                <!-- Or login with text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Or login with "
+                    android:layout_gravity="center"
+                    android:alpha="0.7"/>
+
+
+                <!-- Social media icons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="12dp"
+                        android:id="@+id/fb_btn"
+                        android:background="@drawable/facebook"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>

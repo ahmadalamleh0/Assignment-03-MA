@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root layout: ConstraintLayout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- Relative layout for the entire screen -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EventBasicsActivity">
+
+        <!-- Toolbar for displaying the title and action items -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#3e0944"
+            app:title="Event Information"
+            app:titleTextColor="@android:color/white"/>
+
+        <!-- EditText for entering Event Name -->
+        <EditText
+            android:id="@+id/editEventName"
+            android:drawableStart="@drawable/event"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint=" Event Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            android:layout_below="@+id/toolbar"
+            android:textColor="#500E0E"
+            android:visibility="visible" />
+
+        <!-- EditText for entering Event Date -->
+        <EditText
+            android:id="@+id/editEventDate"
+            android:drawableStart="@drawable/date"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editEventName"
+            android:layout_marginTop="16dp"
+            android:hint=" Date"
+            android:inputType="date" />
+
+        <!-- EditText for entering Event Time -->
+        <EditText
+            android:id="@+id/editEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editEventDate"
+            android:drawableStart="@drawable/time"
+            android:layout_marginTop="16dp"
+            android:hint=" Time"
+            android:inputType="time" />
+
+        <!-- EditText for entering the number of Attendees -->
+        <EditText
+            android:id="@+id/editAttendees"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editEventTime"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/attendees"
+            android:hint=" No. of Attendees"
+            android:inputType="number" />
+
+        <!-- EditText for entering Event Location -->
+        <EditText
+            android:id="@+id/editEventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editAttendees"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/location"
+            android:hint=" Location" />
+
+        <!-- Button for submitting the form -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editEventLocation"
+            android:layout_marginTop="302dp"
+            android:layout_marginBottom="-226dp"
+            android:text="Submit" />
+
+        <!-- Button for submitting the form -->
+        <Button
+            android:id="@+id/AddGuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editEventLocation"
+            android:layout_marginTop="250dp"
+            android:layout_marginBottom="-226dp"
+            android:text="Add Guest" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
